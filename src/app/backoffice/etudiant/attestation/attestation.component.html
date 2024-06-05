@@ -1,0 +1,33 @@
+<div style="background-color: rgb(255, 255, 255);">
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items" style="background-color: #cde0f2;">
+              <h3 style="color: #00458b;">Dépôt Attestation de Stage</h3>
+              <form class="requires-validation"  >
+                <div class="col-md-12">
+                  <input class="form-control" type="text" name="name" placeholder="Nom Etudiant" required [value]="etudiant.nom" disabled>
+                </div>
+                <div class="col-md-12">
+                  <input class="form-control" type="text" name="name" placeholder="Classe" required [value]="etudiant.classE" disabled>
+                </div>
+                <div class="col-md-12">
+                  <input class="form-control" style="margin-top: 4%;" type="file" name="file" placeholder="Image" required (change)="onFileChange($event)">
+                </div>
+                <div class="col-md-12" *ngIf="fileUrl">
+                  <p>URL du fichier : <a [href]="fileUrl" target="_blank">{{ fileUrl }}</a></p>
+                </div>
+                <div class="form-button mt-3">
+                  <button id="submit" type="submit" class="btn btn-primary" style="background-color: #00458b;" [disabled]="!isFileSelected" (click)="onSubmitinit()">Deposer Initiation</button>
+                  <button id="submit" type="submit" class="btn btn-primary" style="background-color: #00458b;" [disabled]="!isFileSelected"  (click)="onSubmitPerf()">Deposer perfectionnement</button>
+                  <button id="submit" type="submit" class="btn btn-primary" style="background-color: #00458b;" [disabled]="!isFileSelected"  (click)="onSubmitPfe()">Deposer pfe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

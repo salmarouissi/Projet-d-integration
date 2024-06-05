@@ -1,0 +1,15 @@
+.img-link {
+    transition: transform 0.3s ease-in-out;
+  }
+  .img-link:hover {
+    transform: scale(1.05);
+  }
+  .img-link img {
+    width: 200px;
+    height: auto;
+  }
+  .img-link div {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+ 

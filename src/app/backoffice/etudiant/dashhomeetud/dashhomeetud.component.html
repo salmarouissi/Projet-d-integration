@@ -1,0 +1,42 @@
+<br>
+<div class="container">
+    <div>
+      <div class="table-title">
+        <div class="row">
+          <h2 style="text-align: center; color: #00458b;">PROPOSITION ENTREPRISE</h2><br><br><br>
+          <hr style="color: #00458b; opacity: 5.25" /><br><br>
+        </div>
+      </div>
+      <form class="row" style="margin-left: 30%;">
+        <div class="col-md-6">
+          <input type="text" formControlName="searchValue" class="form-control" placeholder="Nom Prenom "  /><br>
+        </div>
+        <div class="col-md-3">
+          <button
+            style="background-color: #00458b; border-color: #00458b;" type="submit" class="btn btn-primary btn-block" >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+      <hr style="color: #00458b; opacity: 5.25">
+      <div class="cards-container">
+
+        <div class="card" style="width: 18rem;" *ngFor="let item of entreprises">
+          <img [src]="item.imageUrl" class="card-img-top" alt="..." width="200" height="300">
+          <div class="card-body" style="background-color: #cde0f2;">
+            <h5 class="card-title" style="text-align: center;color: #00458b;">{{item.nomEntreprise}}</h5>
+            <p class="card-text" style="text-align: center;">{{item.description}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">{{item.categorie}}</li>
+            <li class="list-group-item" style="text-align: center;">{{item.mail}}</li>
+            <li class="list-group-item" style="text-align: center;">{{item.telephone}}</li>
+          </ul>
+        </div>
+       
+
+        
+      </div>
+    </div>
+</div>
+

@@ -1,0 +1,79 @@
+<div class="container-fluid">
+   <div class="row flex-nowrap">
+     <div class="col-auto col-md-3 col-xl-2 px-sm-1 px-0" style="background-color: #cde0f2;">
+       <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+         <ul class="nav nav-pills flex-column mb-auto">
+           <li>
+             <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+               <img class="ms-3" src="../../../../assets/logoo.jpeg" width="40px" alt=""/>
+               <span class="fs-4 ms-4 d-none d-sm-inline" style="color: #00458b;">Admin</span>
+             </div>
+           </li>
+           <hr style="color: #00458b;" />
+           <br>
+           <li class="nav-item mb-1">
+             <a routerLink="/dashadmin/dashhomeAdmin" style="background-color: #00458b;" class="nav-link" aria-current="page">
+               <i class="fa fa-home" style="color: #cde0f2;"></i>
+               <span class="ms-3 d-none d-sm-inline" style="color: #cde0f2;">Home</span>
+             </a>
+           </li>
+           <br>
+           <li class="nav-item mb-1">
+             <a routerLink="/dashadmin/listerEtudiant" style="background-color: #00458b;" class="nav-link" aria-current="page">
+               <i class="fa fa-list ms-2" style="color: #cde0f2;"></i>
+               <span class="ms-3 d-none d-sm-inline" style="color:#cde0f2;">Lister Etudiant</span>
+             </a>
+           </li>
+           <br>
+           <li class="nav-item mb-1">
+            <a routerLink="/dashadmin/listerJury" style="background-color: #00458b;" class="nav-link" aria-current="page">
+              <i class="fa fa-list ms-2" style="color: #cde0f2;"></i>
+              <span class="ms-3 d-none d-sm-inline" style="color:#cde0f2;">Lister Jury</span>
+            </a>
+          </li>
+          <br>
+          <li class="nav-item mb-1">
+            <a routerLink="/dashadmin/listerEntreprise" style="background-color: #00458b;" class="nav-link" aria-current="page">
+              <i class="fa fa-list ms-2" style="color: #cde0f2;"></i>
+              <span class="ms-3 d-none d-sm-inline" style="color:#cde0f2;">Lister Entreprise</span>
+            </a>
+          </li>
+          <br>
+           <li class="nav-item mb-1">
+             <a routerLink="/dashadmin/depotAffectation" style="background-color: #00458b;" class="nav-link" aria-current="page">
+               <i class="fa-solid fa-file-lines" style="color: #cde0f2;"></i>
+               <span class="ms-3 d-none d-sm-inline" style="color:#cde0f2;">Depot lettre d'affectation</span>
+             </a>
+           </li>
+           <br>
+           <li class="nav-item mb-1">
+             <a routerLink="/dashadmin/ajoutEntreprise" style="background-color: #00458b;" class="nav-link" aria-current="page">
+               <i class="fa fa-plus ms-2"  style="color: #cde0f2;"></i> 
+               <span class="ms-3 d-none d-sm-inline" style="color: #cde0f2;">Ajouter Entreprise</span>
+             </a>
+           </li>
+         </ul>
+         <hr />
+         <div class="dropdown ms-4 fixed-bottom" style="width: 100px">
+           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="../../../../assets/profile.png" alt="" width="32" height="32" class="rounded-circle me-2"/>
+             <strong class="d-none d-sm-inline" style="color: #00458b;">Admin</strong>
+           </a>
+           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" >
+             <li><hr class="dropdown-divider" /></li>
+             <li><a routerLink="/login"  class="dropdown-item" >Sign out</a></li>
+             <li><a routerLink="/dashadmin/modifierUA"  class="dropdown-item" >Modifier Username</a></li>
+             <li><a routerLink="/dashadmin/modifierPA"  class="dropdown-item" >Modifier Mot de passe</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <main class="col">
+       <router-outlet></router-outlet>
+     </main>
+   </div>
+ </div>
+ 
+   
+            
+

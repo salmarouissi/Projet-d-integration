@@ -1,0 +1,53 @@
+<section class="min-vh-100">
+  <form class="box-form" (ngSubmit)="onSubmit()">
+    <div class="left">
+      <div class="overlay">
+        <h1>Create An Account Here.</h1>
+      </div>
+    </div>
+    <div class="right">
+      <p>Please Enter your information below.</p>
+      <div class="inputs">
+        <input type="text" placeholder="CIN" class="form-control mb-3" [(ngModel)]="cin" name="etudiantcin"/>
+        <input type="text" placeholder="Name" class="form-control mb-3" [(ngModel)]="name" name="name"/>
+        <input type="text" placeholder="Midname" class="form-control mb-3" [(ngModel)]="midname" name="midname"/>
+        <select class="form-select mb-3" [(ngModel)]="departement" name="departement">
+          <option selected disabled>Choose Filiere</option>
+          <option value="TI">TI</option>
+          <option value="MGT">MGT</option>
+        </select>
+        <input type="text" placeholder="Username" class="form-control mb-3" [(ngModel)]="username" name="username"/>
+        <input type="password" placeholder="Password" class="form-control mb-3" [(ngModel)]="mdp" name="Mdp"/>
+
+        <!-- Conditionally display Class input based on userType -->
+        <input *ngIf="userType === 'etudiant'" type="text" placeholder="Class" class="form-control mb-3" [(ngModel)]="classE" name="classE"/>
+
+        <div class="form-check form-check-inline mb-3">
+          <input
+            class="raduis"
+            type="radio"
+            name="userType"
+            id="juryRadio"
+            value="jury"
+            [(ngModel)]="userType"
+          />
+          <label class="form-check-label" for="juryRadio">Jury</label>
+        </div>
+        <div class="form-check form-check-inline mb-3">
+          <input
+            class="raduis"
+            type="radio"
+            name="userType"
+            id="etudiantRadio"
+            value="etudiant"
+            [(ngModel)]="userType"
+          />
+          <label class="form-check-label" for="etudiantRadio">Etudiant</label>
+        </div>
+
+        <br />
+        <button type="submit" class="button">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</section>

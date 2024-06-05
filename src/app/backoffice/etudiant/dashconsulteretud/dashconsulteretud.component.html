@@ -1,0 +1,62 @@
+<br>
+<div class="container">
+    <div>
+      <div class="table-title">
+        <div class="row">
+          <h2 style="text-align: center; color: #00458b;">Les Soutenances</h2><br><br><br>
+          <hr style="color: #00458b; opacity: 5.25" /><br><br>
+        </div>
+      </div>
+      <div class="cards-container">
+
+        <div class="card" style="width: 18rem;">
+          <img src="assets/slide1.jpg" class="card-img-top" alt="erreur">
+          <div class="card-body" style="background-color:#cde0f2 ;">
+            <h5 class="card-title" style="text-align: center;color: #00458b;">Stage d'Initiation</h5>
+          </div>
+          <ng-container *ngFor="let item of soutenanceEtudiant">
+          <ul class="list-group list-group-flush"  *ngIf="item.typeStage=='initiation'">
+            <li class="list-group-item">Jury : {{item.membreJury.nom}} {{item.membreJury.prenom}}</li>
+            <li class="list-group-item">Date : {{item.date}}</li>
+            <li class="list-group-item">Salle : {{item.salle}}</li>
+            <li class="list-group-item">Note :{{item.note}}</li>
+          </ul>
+        </ng-container>
+        </div>
+      
+
+        <div class="card" style="width: 18rem;">
+          <img src="assets/slide3.jpg" class="card-img-top" alt="erreur">
+          <div class="card-body" style="background-color:#cde0f2 ;">
+            <h5 class="card-title" style="text-align: center;color: #00458b;" >Stage de Perfectionnement</h5>
+          </div>
+          <ng-container *ngFor="let item of soutenanceEtudiant">
+            <ul class="list-group list-group-flush"  *ngIf="item.typeStage=='perfectionnement'">
+            <li class="list-group-item">Jury :{{item.membreJury.nom}} {{item.membreJury.prenom}}</li>
+            <li class="list-group-item">Date :{{item.date}}</li>
+            <li class="list-group-item">Salle :{{item.salle}}</li>
+            <li class="list-group-item">Note :{{item.note}}</li>
+          </ul>
+          </ng-container>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="assets/slide2.jpg" class="card-img-top" alt="erreur">
+          <div class="card-body" style="background-color:#cde0f2 ;">
+            <h5 class="card-title" style="text-align: center;color: #00458b;">Stage PFE</h5>
+          </div>
+          <ng-container *ngFor="let item of soutenanceEtudiant">
+            <ul class="list-group list-group-flush"  *ngIf="item.typeStage=='pfe'">
+            <li class="list-group-item">Jury :{{item.membreJury.nom}} {{item.membreJury.prenom}}</li>
+            <li class="list-group-item">Date :{{item.date}}</li>
+            <li class="list-group-item">Salle :{{item.salle}}</li>
+            <li class="list-group-item">Note :{{item.note}}</li>
+          </ul>
+          </ng-container>
+        </div>
+
+        
+      </div>
+    </div>
+</div>
+

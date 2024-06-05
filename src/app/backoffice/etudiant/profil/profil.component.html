@@ -1,0 +1,47 @@
+<div>
+    <div class="container">
+        <main class="main-content">
+            <header>
+                <h1 style="color: #00458b;">Profile Etudiant</h1>
+                <div class="notification">
+                    <img src="../../../../assets/profile.png" style="width: 50px;height: 50px;" alt="Notification Icon">
+                </div>
+            </header>
+            <section class="application">
+                <h2 style="color: #00458b;margin-left: 40%;margin-top: 5%;">Application</h2>
+                <div class="tabs" style="margin-left: 25%;">
+                    <button routerLink="/dashetudiant/modifU">Modifier Username</button>
+                    <button routerLink="/dashetudiant/modifP">Modifier mot de passe</button>
+                    <button routerLink="/dashetudiant/modifCi">Modifier CIN</button>
+                </div>
+                <form style="margin-top: 3%;">
+                    <div class="form-group">
+                        <label for="first-name" style="color: #00458b;">CIN</label>
+                        <input type="text" [value]="Etudiant.cin">
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name" style="color: #00458b;" >Nom</label>
+                        <input type="text" [value]="Etudiant.nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name" style="color: #00458b;">Prénom</label>
+                        <input type="text" [value]="Etudiant.prenom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="color: #00458b;">Username</label>
+                        <input type="text" [value]="Etudiant.username">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" style="color: #00458b;" >Département</label>
+                        <select style="height: 40px;border-radius: 5px;" [value]="Etudiant.departement">
+                            <option value=""></option>
+                            <option value="TI">TI</option>
+                            <option value="MGT">Mgt</option>
+                        </select>
+
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</div>

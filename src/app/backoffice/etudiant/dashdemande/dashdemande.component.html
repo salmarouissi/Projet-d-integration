@@ -1,0 +1,71 @@
+<div class="container" id="printable-section">
+  <section class="request-section">
+    <h3>A demande de stage de M./Mme le/la Directeur/trice</h3>
+
+    <h4>Objet : Demande de Stage (Facultatif)</h4>
+
+    <p>
+      L'Institut Supérieur des Etudes Technologiques de CHARGUIA assure depuis
+      un certain nombre d'années plusieurs formations en licences. Dans le cadre
+      de l'ouverture de notre institution universitaire sur son environnement
+      socio-économique, nous encourageons nos étudiants à s’initier à la vie
+      professionnelle et ce, en effectuant un stage. Nous venons donc, par la
+      présente, vous demander de bien vouloir accueillir, au sein de votre
+      entreprise, l'étudiant(e) "nom d'etudiant"
+      inscrit(e) au cours de l'année universitaire
+      <!-- date stage-->
+    </p>
+
+    <p>
+      Nous vous prions, en cas de réponse positive, de bien vouloir remplir la
+      fiche de stage ci-dessous et la remettre à l'étudiant(e) ou la retourner
+      par email à l'adresse suivante : stages.isetch@gmail.com, et ce afin de
+      préparer la lettre d'affectation du stagiaire. En vous remerciant pour
+      votre collaboration, nous vous adressons, Madame, Monsieur, l'expression
+      de notre respect.
+    </p>
+
+    <div class="separator">
+      ...........................................................................................................................................................................................
+    </div>
+
+    <div class="form-section">
+      <h4>Fiche de Stage</h4>
+      <p>
+        (A remplir avec la plus grande précision car ces informations seront
+        utilisées dans toutes les correspondances officielles)
+      </p>
+
+      <span><strong>Entreprise : </strong></span> <input type="text" #en> <br>
+      <span><strong>Département : </strong></span> <input type="text" style="margin-top: 1%;" #de> <br>
+      <span><strong>Le responsable direct du stagiaire : </strong></span> <input type="text" style="margin-top: 1%;" #re> <br>
+      <span><strong>Type de stage : </strong></span> <input type="text" style="margin-top: 1%;" #ty>
+      <p>
+        <strong>Stage prévu du </strong> <input type="date" style="margin-top: 1%;" #db> <strong> au </strong> <input type="date" style="margin-top: 1%;"  #df>
+      </p>
+      <span>
+        <strong>Tél : </strong> <input type="text" style="margin-top: 1%;" #t>
+      </span>
+  
+    </div>
+  </section>
+</div>
+
+<div class="btn-group" role="group">
+  <button
+    type="button"
+    class="btn btn-primary btn-custom"
+    (click)="printElement('printable-section')">
+    <i class="fas fa-print"></i> Imprimer
+  </button>
+</div>
+<div>
+<div class="container" id="printable-section">
+  <!-- Your existing content -->
+  <input type="text" placeholder="file name" [(ngModel)]="filename" #x>
+
+
+<button type="button" class="btn btn-secondary btn-custom" style="margin-left: 1%;"  (click)="addDemande(x.value,en.value,de.value,re.value,ty.value,df.value,db.value,t.value)">
+  <i class="fas fa-envelope"></i> Recevoir une lettre d'affectation
+</button>
+</div>

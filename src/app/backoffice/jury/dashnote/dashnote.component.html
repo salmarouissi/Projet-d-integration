@@ -1,0 +1,44 @@
+<br>
+<div class="container">
+  <h2 style="text-align: center;color: #00458b;">Affecter Note</h2><br><br>
+  <form class="row">
+    <div class="col-md-6">
+      <input type="text" formControlName="searchValue" class="form-control" placeholder="Nom Prenom "  /><br>
+    </div>
+    <div class="col-md-3">
+      <button
+        style="background-color: #00458b; border-color: #00458b;" type="submit" class="btn btn-primary btn-block" >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </form>
+</div>
+
+<hr style="color: #00458b; opacity: 5.25" />
+<div class="container">
+  <div class="table-wrapper">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr> 
+          <th style="color: #00458b;">Nom Etudiant</th>
+          <th style="color: #00458b;">Classe</th>
+          <th style="color: #00458b;">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of soutenanceJury">
+          <td>{{ item.etudiant ? (item.etudiant.nom + ' ' + item.etudiant.prenom) : '' }}</td>
+          <td>{{item.etudiant.classE}}</td>
+          <td>
+            <form >
+              <input type="number" max="20" min="0" #n> <span>{{item.note}}</span>/20 
+              <i class="fa-solid fa-user-check" style="color: forestgreen;margin-left: 7%;" (click)="update(n.value,item.id)"></i>
+            </form>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+</div>
+

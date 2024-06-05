@@ -1,0 +1,32 @@
+<header style="background-color: white; font-size: 20px;">
+    <div class="container">
+      <nav class="navbar navbar-dark navbar-expand-lg">
+        <a class="navbar-brand" routerLink="/home">
+          <img src="../../../assets/logoo.jpeg" height="60" alt="image">
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav5" aria-controls="navbarNav5" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-end ml-auto " id="navbarNav5" style="padding-left: 70%;">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a routerLinkActive="active" style="color: black;font-family:Arial;" class="nav-link" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group">
+                <button type="button" style="height: 50px;color: rgb(247, 244, 244);font-size: 20px;" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">Département</button>
+                <ul class="dropdown-menu">
+                  <li> <span class="dropdown-item" href="#">TI</span> </li>
+                  <li> <span class="dropdown-item" href="#">MGT</span> </li>
+                </ul>
+              </div>
+            </li>
+            <a style="font-size: 20px; background-color: #00458B;" class="btn btn-primary ml-md-3" routerLink="/login">Log in</a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <hr style="color: #00458B; opacity:5.25 ;">
+  </header>

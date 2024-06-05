@@ -1,0 +1,31 @@
+<div style="background-color: rgb(255, 255, 255);">
+    <div class="form-body" >
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content" >
+                    <div class="form-items" style="background-color: #cde0f2; ">
+                        <h3 style="color: #00458b;">Modifier Username</h3>
+                        <form class="requires-validation" novalidate>
+    
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="name" placeholder="Ancien username" #ac required>
+                            </div>
+    
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" placeholder="Nouveau username"#np required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input class="form-control" style="margin-top: 4%;" type="text" name="name" placeholder="Confirmer username" #np2 required>
+                            </div>
+
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary" style="background-color: #00458b;margin-left: 40%;" (click)="update(ac.value,np.value,np2.value)">Modifier</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

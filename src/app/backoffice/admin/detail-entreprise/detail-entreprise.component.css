@@ -1,0 +1,17 @@
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group p {
+    margin: 0;
+    margin-right: 10px;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+.input-group input,
+.input-group textarea {
+    flex: 1;
+}

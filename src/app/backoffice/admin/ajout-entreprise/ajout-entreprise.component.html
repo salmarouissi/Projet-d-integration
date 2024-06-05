@@ -1,0 +1,40 @@
+<div style="background-color: rgb(255, 255, 255);">
+<div class="form-body" >
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content" >
+                <div class="form-items" style="background-color: #cde0f2; ">
+                    <h3 style="color: #00458b;">Ajouter Entreprise</h3>
+                    <form class="requires-validation" novalidate [formGroup]="entreform" (ngSubmit)="ajouter()">
+
+                        <div class="col-md-12">
+                           <input class="form-control" type="text" name="name" placeholder="Nom Entreprise" required formControlName="nomEntreprise">
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="name" placeholder="Categorie" required formControlName="categorie">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="email" placeholder="E-mail" required formControlName="mail">
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="email" name="text" placeholder="Telephone" required formControlName="telephone">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="name" placeholder="Iamge" required formControlName="imageUrl">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control" style="margin-top: 4%;"  placeholder="Description" formControlName="description"></textarea>
+                        </div>
+            
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary" style="background-color: #00458b;">Enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<main class="col">
+    <div class="table-title">
+        <div class="row">
+            <h2 style="margin-left: 37%; margin-top: 2%; color: #00458b;">Liste les Entreprise</h2><br><br>
+            <hr>
+        </div>
+    </div>
+    <form class="row" style="margin-left: 30%; margin-bottom: 3%;" (ngSubmit)="onSearch()">
+        <div class="col-md-6">
+            <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Nom Entreprise" 
+                [(ngModel)]="searchValue" 
+                name="searchValue"
+            /><br>
+        </div>
+        <div class="col-md-3">
+            <button 
+                style="background-color: #00458b; border-color: #00458b;" 
+                type="submit" 
+                class="btn btn-primary btn-block"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of filteredTab">
+            <div class="card m-2" style="width: 100%;">
+                <img class="card-img" [src]="item.imageUrl" alt="...." />
+                <div class="card-img-overlay">
+                    <br>
+                    <h2 class="card-title" style="color: #ffbe00;">{{item.nomEntreprise}}</h2><br>
+                    <a [routerLink]="['/dashadmin/detailsE', item.idEntreprise]" class="btn btn-warning">Détails</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

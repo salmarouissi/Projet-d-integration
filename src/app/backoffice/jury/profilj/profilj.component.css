@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .profile-settings {
+    margin-top: 50px;
+}
+
+.sidebar .profile-settings a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+.main-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.main-content header h1 {
+    margin: 0;
+}
+
+.main-content header .notification {
+    display: flex;
+    align-items: center;
+}
+
+.main-content header .notification img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.application {
+    margin-top: 20px;
+}
+
+.application h2 {
+    margin: 0 0 20px 0;
+}
+
+.application .tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.application .tabs button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.application .tabs button:hover {
+    border-bottom: 2px solid #007bff;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}

@@ -1,0 +1,14 @@
+.forMembers{
+    background-color:#cde0f2 ;
+    font-style: italic;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    gap: 16px; 
+}
+
+.card {
+    max-width: 100%; 
+}

@@ -1,0 +1,27 @@
+<section class="min-vh-100">
+  <form class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <h1>Login Here.</h1>
+        <br />
+        <a style="text-decoration: none" href="/home">Go back to home page</a>
+      </div>
+    </div>
+    <div class="right">
+      <img src="../../../assets/logoo.jpeg" width="200px" /><br /><br /><br />
+      <p>Please Enter your user name and password below.</p>
+      <div class="inputs">
+        <input type="text" placeholder="user name" #name />
+        <br />
+        <input type="password" placeholder="password" #password />
+        <br />
+        <a href="/create" class="signup-link">Don't have an account? Create one</a>
+      </div>
+
+      <br /><br />
+
+      <br />
+      <button type="submit" class="button" (click)="login(name.value, password.value)">Login</button>
+    </div>
+  </form>
+</section>
